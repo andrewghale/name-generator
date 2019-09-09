@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Name Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Name Generator</h1>
+        <div class="cols">
+            <div class="explain-container">
+                <div class="name-container">
+                    <form class="main-form">
+                        <label class="label" for="guessField">
+                            <input type="submit" value="Generate Male Name"
+                            class="guessSubmit button" id="submit-male-guess" />
+                        </label>
+                    </form>
+                    <div id="male-output" class="output">
+                        Test
+                    </div>
+                </div>
+                <div class="name-container">
+                    <form class="main-form">
+                        <label class="label" for="guessField">
+                            <input type="submit" value="Generate Female Name"
+                            class="guessSubmit button" id="submit-female-guess" />
+                        </label>
+                    </form>
+                    <div id="female-output" class="output">
+                        Test
+                    </div>
+                </div>
+            </div>
+            <div class="explain-container">
+                <h3 class="sub-title">How It Works</h3>
+                <div class="code-container">
+                    <button id="capitalize-button" class="button">
+                            Capitalize First
+                    </button>
+                    <p id="capitalize-code" class="code hidden">
+                        const <span class="red-code">capitalizeFirst</span> = (string) => {
+                            <br>
+                            &ensp; return string.charAt(0).toUpperCase() + string.slice(1);
+                            <br>
+                        };
+                    </p>
+                </div>
+                <div class="code-container">
+                    <button id="randnum-button" class="button">
+                            Random Number
+                    </button>
+                    <p id="randnum-code" class="code hidden">
+                        const <span class="blue-code">getRandomInt</span> = (<span class="white-code">min</span>, <span class="white-code">max</span>) => { <br>
+                            &ensp; return Math.floor(Math.random() * (max - min)) + min;
+                        };
+                    </p>
+                </div>
+                <div class="code-container">
+                    <button id="namegen-button" class="button">
+                            Name Generator
+                    </button>
+                    <p id="namegen-code" class="code hidden">
+                        const generateName = () => { <br>
+                            &ensp; const name1 = ["andrew","niall", "joe", "james", "alan"]; <br>
+                            &ensp; const name2 = ["hale","barber", "james", "oxley-shaw", "weller"]; <br>
+                            &ensp; const name =
+                                <span class="red-code">capitalizeFirst</span>(name1[<span class="blue-code">getRandomInt</span>(<span class="white-code">0</span>, <span class="white-code">name1.length</span>)]) <br>
+                                &ensp;+ ' ' <br>
+                                &ensp;+ <span class="red-code">capitalizeFirst</span>(name2[<span class="blue-code">getRandomInt</span>(<span class="white-code">0</span>, <span class="white-code">name2.length</span>)]); <br>
+                            &ensp; return name; <br>
+                        };
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/js/jquery.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
